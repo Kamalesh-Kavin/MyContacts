@@ -10,6 +10,7 @@ const port = process.env.PORT || 5000;
 //app.use is like a middleware
 app.use(express.json()); //this allows you to parse JSON and read body from client request
 app.use("/api/contacts", require("./routes/contactRoutes"));
+app.use("/api/users", require("./routes/userRoutes"));
 app.use(errorHandler);
 
 app.listen(port, () => {
